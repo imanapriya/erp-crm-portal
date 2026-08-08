@@ -13,8 +13,14 @@ import challanRoutes from "./modules/challans/challan.routes";
 export function createApp(): Express {
   const app = express();
 
-  app.use(helmet());
-  app.use(cors({ origin: env.corsOrigin, credentials: true }));
+  app.use(
+    cors({
+      origin: (origin, callback) => {
+        callback(null, origin || true);
+      },
+      credentials: true,
+    })
+  );
   app.use(express.json());
   app.use(morgan(env.nodeEnv === "development" ? "dev" : "combined"));
 
