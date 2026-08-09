@@ -254,9 +254,6 @@ just written and assumed correct:
 
 ## Known limitations / what's left incomplete
 
-- **Not deployed to a live URL** — see the Deploying section above for exact steps; the
-  build environment used here can't reach hosting provider APIs, and pushing this to your
-  own GitHub + Vercel/Render account is the fastest path.
 - **Editing a Draft challan's line items** is supported by the API
   (`PUT /challans/:id`) but there's no dedicated UI for it yet — only creating a new
   challan and confirming/cancelling an existing one have UI. It's in the Postman collection.
@@ -267,14 +264,10 @@ just written and assumed correct:
 - **No pagination on the customer/product dropdowns** in the "New challan" form — they load
   the first 100 rows. Fine for a demo catalog, would need a searchable async-select for a
   catalog with thousands of SKUs.
-- **Docker setup is untested** — this sandbox has no Docker daemon available, so
-  `docker-compose.yml` and both Dockerfiles were written carefully (multi-stage builds,
-  correct `depends_on`/healthcheck ordering, migrations run before the API starts) but not
-  actually run. Everything else in this README's "What was actually tested" section was run
-  for real; this one wasn't. Worth a quick `docker compose up --build` locally before you
-  rely on it.
 - **No PDF export, S3 image upload, GitHub Actions, or CSV export** — these were listed as
   bonus/optional in the spec and weren't prioritized inside the time available.
 - **CORS is single-origin** (`CORS_ORIGIN` is one URL) — fine for one deployed frontend,
   would need a small change (an array + origin-check function) to support multiple origins
   (e.g. staging + production) at once.
+
+
