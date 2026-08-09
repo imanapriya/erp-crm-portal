@@ -8,6 +8,11 @@ and sales challans, with role-based access for Admin, Sales, Warehouse, and Acco
 Built for the Full Stack Developer case study. This README covers setup, architecture,
 deployment, assumptions, and known limitations.
 
+## Bonus Features Implemented
+
+- 📄 **Export Invoice as PDF**: Built-in PDF export & print stylesheet on the Challan Detail view (`/challans/:id`).
+- 🐳 **Docker Setup**: `docker-compose.yml` with containerized Node.js backend, React frontend, and PostgreSQL database.
+- ⚙️ **GitHub Actions CI**: Automated CI pipeline (`.github/workflows/ci.yml`) to build and type-check backend & frontend on push.
 
 ## Tech stack
 
