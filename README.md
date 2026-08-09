@@ -3,8 +3,11 @@
 A small ERP/CRM system for a wholesale/distribution company: customers, products/inventory,
 and sales challans, with role-based access for Admin, Sales, Warehouse, and Accounts staff.
 
+**Live Demo**: [https://erp-crm-portal-self.vercel.app/login](https://erp-crm-portal-self.vercel.app/login)
+
 Built for the Full Stack Developer case study. This README covers setup, architecture,
 deployment, assumptions, and known limitations.
+
 
 ## Tech stack
 
