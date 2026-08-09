@@ -267,10 +267,10 @@ just written and assumed correct:
 - **No pagination on the customer/product dropdowns** in the "New challan" form — they load
   the first 100 rows. Fine for a demo catalog, would need a searchable async-select for a
   catalog with thousands of SKUs.
-- **No PDF export, S3 image upload, GitHub Actions, or CSV export** — these were listed as
-  bonus/optional in the spec and weren't prioritized inside the time available.
+- **No S3 image upload or CSV export** — these were listed as optional in the spec and weren't prioritized inside the time available. (Note: Docker setup, PDF invoice export, and GitHub Actions CI have been added).
 - **CORS is single-origin** (`CORS_ORIGIN` is one URL) — fine for one deployed frontend,
   would need a small change (an array + origin-check function) to support multiple origins
   (e.g. staging + production) at once.
+
 
 

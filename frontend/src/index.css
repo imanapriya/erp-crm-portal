@@ -612,3 +612,29 @@ tbody tr.clickable:hover {
   text-align: center;
   color: var(--ink-faint);
 }
+
+@media print {
+  .sidebar,
+  .top-bar,
+  .toolbar,
+  .no-print {
+    display: none !important;
+  }
+  .app-shell {
+    display: block !important;
+    background: #fff !important;
+  }
+  .main-content {
+    padding: 0 !important;
+  }
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    break-inside: avoid;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+}
+

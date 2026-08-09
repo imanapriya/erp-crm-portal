@@ -83,6 +83,9 @@ export function ChallanDetailPage() {
         <StatusBadge status={challan.status} />
         <span className="chip">{challan.totalQuantity} units</span>
         <div style={{ marginLeft: "auto", display: "flex", gap: 8 }}>
+          <button className="btn btn-secondary" onClick={() => window.print()}>
+            Export PDF
+          </button>
           {canConfirm && (
             <button className="btn btn-primary" onClick={handleConfirm} disabled={actionLoading !== null}>
               {actionLoading === "confirm" ? "Confirming…" : "Confirm challan"}
